@@ -10,8 +10,16 @@ class CardGame {
         self.deck.shuffle()
     }
 
+    func getPlayerPoints() -> Int{
+        return playerPoints
+    }
+
+    func getSystemPoints() -> Int{
+        return systemPoints
+    }
+
     func playRound(playerChoice: Int) -> (winner: String, points: Int)? {
-    let playerCardOptional = deck.drawCard(position: playerChoice)
+    let playerCardOptional = deck.drawCard(at: playerChoice)
     if playerCardOptional == nil {
         return nil
     }

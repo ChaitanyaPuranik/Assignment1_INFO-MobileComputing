@@ -32,8 +32,8 @@ class Deck {
             return nil
         }
         else{
-            let randomIndex = Int.random(0..<cards.count)
-            return cards.remove(in: randomIndex)
+            let randomIndex = Int.random(in: 0..<cards.count)
+            return cards.remove(at: randomIndex)
         }
     }
 }
