@@ -39,4 +39,18 @@ class CardGame {
     }
 }
 
+    func isGameOver() -> Bool {
+        return deck.cards.isEmpty
+    }
+    
+    func determineWinner() -> String {
+        if playerPoints > systemPoints {
+            return playerName
+        } else if systemPoints > playerPoints {
+            return "System"
+        } else {
+            return "Tie"
+        }
+    }
+
 }
